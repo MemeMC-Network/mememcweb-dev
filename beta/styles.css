@@ -857,13 +857,18 @@ body {
 }
 
 .partners-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1607513746994-51f730a44832?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     background-size: cover;
     background-position: center;
     padding: 6rem 2rem;
     text-align: center;
     margin-bottom: 3rem;
+    margin-top: -4rem; /* Pull up into nav bar space */
+    z-index: -1; /* Ensure it stays behind nav */
+    display: flex; /* Add flexbox */
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    min-height: 300px; /* Ensure minimum height */
 }
 
 .partners-hero h1 {
