@@ -6,9 +6,12 @@
     <title>MemeMC - Partners</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://panel.mememc.club/storage/VwjoYADexwUXtQiNrwICG7EdK32WKdrAPRkdNuaa.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <nav>
+    <!-- Navigation -->
+    <nav class="glass-nav">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="https://panel.mememc.club/storage/VwjoYADexwUXtQiNrwICG7EdK32WKdrAPRkdNuaa.png" alt="MemeMC Logo" class="logo-img">
@@ -16,69 +19,180 @@
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">
-                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    Home
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
                 </a>
                 <a href="rules.html" class="nav-link">
-                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-                    Rules
+                    <i class="fas fa-book"></i>
+                    <span>Rules</span>
                 </a>
                 <a href="partners.html" class="nav-link active">
-                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    Partners
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
                 </a>
                 <a href="staff.html" class="nav-link">
-                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    Staff
+                    <i class="fas fa-users"></i>
+                    <span>Staff</span>
+                </a>
+                <a href="https://store.mememc.club" class="btn btn-store" target="_blank">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Store</span>
+                </a>
+                <a href="#" class="btn btn-join">
+                    <i class="fas fa-plug"></i>
+                    <span>Join Server</span>
                 </a>
             </div>
             <button class="mobile-menu-btn">
-                <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
+    <!-- Main Content -->
     <main>
-        <section class="page-header">
-            <h1>Our Partners</h1>
+        <section class="page-header animate__animated animate__fadeIn">
+            <h1>Our <span class="highlight">Partners</span></h1>
             <p>Check out these awesome servers we're partnered with</p>
         </section>
 
         <section class="partners-grid">
-            <div class="partner-card">
-                <img src="https://via.placeholder.com/100" alt="BlockCraft Logo">
-                <h3>BlockCraft</h3>
-                <p>Our building-focused partner server</p>
+            <div class="partner-card animate__animated animate__fadeInUp">
+                <div class="partner-logo">
+                    <img src="https://via.placeholder.com/150" alt="BlockCraft Logo">
+                </div>
+                <div class="partner-info">
+                    <h3>BlockCraft</h3>
+                    <p class="partner-desc">Our building-focused partner server with amazing creative plots and building competitions.</p>
+                    <div class="partner-stats">
+                        <span><i class="fas fa-users"></i> 500+ Daily Players</span>
+                        <span><i class="fas fa-globe"></i> blockcraft.example.com</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Server
+                    </a>
+                </div>
             </div>
-            <div class="partner-card">
-                <img src="https://via.placeholder.com/100" alt="PixelPvP Logo">
-                <h3>PixelPvP</h3>
-                <p>The best PvP experience in Minecraft</p>
+
+            <div class="partner-card animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="partner-logo">
+                    <img src="https://via.placeholder.com/150" alt="PixelPvP Logo">
+                </div>
+                <div class="partner-info">
+                    <h3>PixelPvP</h3>
+                    <p class="partner-desc">The ultimate PvP experience with custom kits, tournaments, and ranked matches.</p>
+                    <div class="partner-stats">
+                        <span><i class="fas fa-users"></i> 800+ Daily Players</span>
+                        <span><i class="fas fa-globe"></i> pixelpvp.example.com</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Server
+                    </a>
+                </div>
             </div>
-            <div class="partner-card">
-                <img src="https://via.placeholder.com/100" alt="RedstoneTech Logo">
-                <h3>RedstoneTech</h3>
-                <p>Technical Minecraft at its finest</p>
+
+            <div class="partner-card animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="partner-logo">
+                    <img src="https://via.placeholder.com/150" alt="RedstoneTech Logo">
+                </div>
+                <div class="partner-info">
+                    <h3>RedstoneTech</h3>
+                    <p class="partner-desc">Technical Minecraft at its finest with redstone challenges and engineering competitions.</p>
+                    <div class="partner-stats">
+                        <span><i class="fas fa-users"></i> 300+ Daily Players</span>
+                        <span><i class="fas fa-globe"></i> redstonetech.example.com</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Server
+                    </a>
+                </div>
+            </div>
+
+            <div class="partner-card animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="partner-logo">
+                    <img src="https://via.placeholder.com/150" alt="SkyBlock Pro Logo">
+                </div>
+                <div class="partner-info">
+                    <h3>SkyBlock Pro</h3>
+                    <p class="partner-desc">Advanced SkyBlock experience with custom islands, challenges, and economy.</p>
+                    <div class="partner-stats">
+                        <span><i class="fas fa-users"></i> 600+ Daily Players</span>
+                        <span><i class="fas fa-globe"></i> skyblockpro.example.com</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit Server
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="partner-cta animate__animated animate__fadeIn animate__delay-4s">
+            <div class="cta-content">
+                <h3>Want to become a partner?</h3>
+                <p>We're always looking for quality servers to partner with. Reach out to us on Discord!</p>
+                <a href="#" class="btn btn-primary">
+                    <i class="fab fa-discord"></i>
+                    Contact Us
+                </a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <div class="footer-brand animate__animated animate__fadeIn">
                 <img src="https://panel.mememc.club/storage/VwjoYADexwUXtQiNrwICG7EdK32WKdrAPRkdNuaa.png" alt="MemeMC Logo">
-                <span>MemeMC</span>
+                <div class="brand-info">
+                    <h3>MemeMC</h3>
+                    <p>The most fun Minecraft server network</p>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="rules.html">Rules</a>
-                <a href="partners.html">Partners</a>
-                <a href="staff.html">Staff</a>
+            
+            <div class="footer-social animate__animated animate__fadeIn animate__delay-1s">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link discord" aria-label="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="social-link tiktok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-link instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link twitter" aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link youtube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://store.mememc.club" class="social-link store" aria-label="Store" target="_blank">
+                        <i class="fas fa-store"></i>
+                    </a>
+                </div>
             </div>
-            <div class="footer-legal">
-                <p>© 2023 MemeMC. All rights reserved.</p>
-                <p>Minecraft is a trademark of Mojang Studios. Not affiliated with Mojang or Microsoft.</p>
+            
+            <div class="footer-links animate__animated animate__fadeIn animate__delay-2s">
+                <div class="link-group">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="rules.html"><i class="fas fa-chevron-right"></i> Rules</a></li>
+                        <li><a href="partners.html"><i class="fas fa-chevron-right"></i> Partners</a></li>
+                        <li><a href="staff.html"><i class="fas fa-chevron-right"></i> Staff</a></li>
+                    </ul>
+                </div>
             </div>
+        </div>
+        
+        <div class="footer-bottom animate__animated animate__fadeIn animate__delay-3s">
+            <p>© 2023 MemeMC. All rights reserved.</p>
+            <p>Minecraft is a trademark of Mojang Studios. Not affiliated with Mojang or Microsoft.</p>
         </div>
     </footer>
 
