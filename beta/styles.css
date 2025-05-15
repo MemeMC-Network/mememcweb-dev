@@ -899,6 +899,7 @@ body {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    margin-inline: auto;
 }
 
 .partner-card::before {
