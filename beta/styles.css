@@ -928,10 +928,13 @@ body {
     height: 120px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
-    object-fit: contain;
+    object-fit: fill;
     border: 3px solid var(--primary-light);
     padding: 0.5rem;
     background: white;
+    overflow: hidden;
+    position: relative;
+    
 }
 
 .partner-card h3 {
