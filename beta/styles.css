@@ -889,6 +889,8 @@ body {
     margin-top: 2rem;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line if necessary */
+    
 }
 
 .partner-card {
@@ -975,12 +977,16 @@ body {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--primary-light);
+    text-align: center; /* Centers text horizontally */
+    max-width: 600px; /* Optional: limits the width for better readability */
 }
 
 .become-partner p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
     opacity: 0.9;
+    text-align: center; /* Centers text horizontally */
+    max-width: 600px; /* Optional: limits the width for better readability */
 }
 
 /* Rules Page Specific Styles */
