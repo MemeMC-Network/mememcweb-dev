@@ -3,91 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemeMC - Staff</title>
+    <title>MemeMC - Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://panel.mememc.club/storage/VwjoYADexwUXtQiNrwICG7EdK32WKdrAPRkdNuaa.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>
+    <!-- Navigation -->
+    <nav class="glass-nav">
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="https://panel.mememc.club/storage/VwjoYADexwUXtQiNrwICG7EdK32WKdrAPRkdNuaa.png" alt="MemeMC Logo" class="logo-img">
                 <span class="logo-text">MemeMC</span>
             </a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">
-                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    Home
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
                 </a>
                 <a href="rules.html" class="nav-link">
-                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-                    Rules
+                    <i class="fas fa-book"></i>
+                    <span>Rules</span>
                 </a>
                 <a href="partners.html" class="nav-link">
-                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    Partners
+                    <i class="fas fa-handshake"></i>
+                    <span>Partners</span>
                 </a>
-                <a href="staff.html" class="nav-link active">
-                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    Staff
+                <a href="staff.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Staff</span>
+                </a>
+                <a href="#" class="btn btn-join">
+                    <i class="fas fa-plug"></i>
+                    <span>Join Server</span>
                 </a>
             </div>
             <button class="mobile-menu-btn">
-                <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
+    <!-- Main Content -->
     <main>
-        <section class="page-header">
-            <h1>Our Team</h1>
-            <p>Meet the people who make MemeMC possible</p>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to <span class="highlight">MemeMC</span></h1>
+                <p class="subtitle">The most fun Minecraft server network</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-plug"></i>
+                        Join Now
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fab fa-discord"></i>
+                        Discord
+                    </a>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </section>
 
-        <section class="staff-grid">
-            <div class="staff-card">
-                <img src="https://via.placeholder.com/120" alt="Notch">
-                <h3>Notch</h3>
-                <p class="staff-role">Admin</p>
-                <p>Server Owner</p>
-            </div>
-            <div class="staff-card">
-                <img src="https://via.placeholder.com/120" alt="Dinnerbone">
-                <h3>Dinnerbone</h3>
-                <p class="staff-role">Admin</p>
-                <p>Lead Developer</p>
-            </div>
-            <div class="staff-card">
-                <img src="https://via.placeholder.com/120" alt="Jeb">
-                <h3>Jeb</h3>
-                <p class="staff-role">Moderator</p>
-                <p>Community Manager</p>
-            </div>
-            <div class="staff-card">
-                <img src="https://via.placeholder.com/120" alt="Herobrine">
-                <h3>Herobrine</h3>
-                <p class="staff-role">Helper</p>
-                <p>Server Support</p>
+        <section class="features">
+            <h2>Our <span class="highlight">Server Features</span></h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Survival</h3>
+                    <p>Classic survival with economy, shops, and community projects.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3>Creative</h3>
+                    <p>Unlimited building potential in our creative worlds.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Minigames</h3>
+                    <p>Bedwars, Skywars, and other fun minigames.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
                 <img src="https://panel.mememc.club/storage/VwjoYADexwUXtQiNrwICG7EdK32WKdrAPRkdNuaa.png" alt="MemeMC Logo">
-                <span>MemeMC</span>
+                <div class="brand-info">
+                    <h3>MemeMC</h3>
+                    <p>The most fun Minecraft server network</p>
+                </div>
             </div>
+            
             <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="rules.html">Rules</a>
-                <a href="partners.html">Partners</a>
-                <a href="staff.html">Staff</a>
+                <div class="link-group">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="rules.html"><i class="fas fa-chevron-right"></i> Rules</a></li>
+                        <li><a href="partners.html"><i class="fas fa-chevron-right"></i> Partners</a></li>
+                        <li><a href="staff.html"><i class="fas fa-chevron-right"></i> Staff</a></li>
+                    </ul>
+                </div>
+                
+                <div class="link-group">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+                
+                <div class="link-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-legal">
-                <p>© 2023 MemeMC. All rights reserved.</p>
-                <p>Minecraft is a trademark of Mojang Studios. Not affiliated with Mojang or Microsoft.</p>
-            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2023 MemeMC. All rights reserved.</p>
+            <p>Minecraft is a trademark of Mojang Studios. Not affiliated with Mojang or Microsoft.</p>
         </div>
     </footer>
 
