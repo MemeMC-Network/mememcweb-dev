@@ -77,3 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 });
+
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+      alert('Copied to clipboard: ' + text);
+    }, function(err) {
+      alert('Failed to copy text: ', err);
+    });
+  }
