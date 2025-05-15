@@ -3,527 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemeMC - Minecraft Server</title>
-    <style>
-        /* Base Styles */
-        :root {
-            --primary: #166534;
-            --primary-dark: #14532d;
-            --primary-darker: #134e2a;
-            --primary-light: #22c55e;
-            --text: #ffffff;
-            --text-secondary: #bbf7d0;
-            --card-bg: #166534;
-            --card-border: #22c55e;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(to bottom, var(--primary-dark), var(--primary-darker));
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        /* Navigation */
-        nav {
-            background-color: var(--primary);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            padding: 1rem 2rem;
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .logo-img {
-            width: 40px;
-            height: 40px;
-            background-color: #e5e7eb;
-            border: 2px dashed #9ca3af;
-            border-radius: 0.5rem;
-        }
-        
-        .logo-text {
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .nav-link {
-            color: var(--text);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
-            transition: background-color 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        
-        .nav-link.active {
-            background-color: var(--primary-light);
-            color: var(--primary-dark);
-            font-weight: 500;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Main Content */
-        main {
-            flex: 1;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        
-        /* Cards */
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-        
-        .card-header {
-            padding: 1.5rem 1.5rem 0;
-        }
-        
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        
-        .card-description {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-        
-        .card-content {
-            padding: 1.5rem;
-        }
-        
-        /* Buttons */
-        .btn {
-            padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-light);
-            color: var(--primary-dark);
-        }
-        
-        .btn-primary:hover {
-            background-color: #16a34a;
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--text);
-            border: 1px solid var(--text);
-        }
-        
-        .btn-outline:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Grid Layout */
-        .grid {
-            display: grid;
-            gap: 1.5rem;
-        }
-        
-        .grid-cols-1 {
-            grid-template-columns: repeat(1, 1fr);
-        }
-        
-        .grid-cols-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        
-        .grid-cols-3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        
-        .grid-cols-4 {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        
-        /* Spacing */
-        .space-y-4 > * + * {
-            margin-top: 1rem;
-        }
-        
-        .space-y-6 > * + * {
-            margin-top: 1.5rem;
-        }
-        
-        .space-y-8 > * + * {
-            margin-top: 2rem;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--primary);
-            padding: 1.5rem;
-            text-align: center;
-            margin-top: auto;
-        }
-        
-        .footer-text {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            margin-top: 0.5rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .grid-cols-2,
-            .grid-cols-3,
-            .grid-cols-4 {
-                grid-template-columns: repeat(1, 1fr);
-            }
-        }
-    </style>
+    <title>MemeMC - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://panel.mememc.club/storage/VwjoYADexwUXtQiNrwICG7EdK32WKdrAPRkdNuaa.png">
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">
-                <div class="logo-img"></div>
+            <a href="index.html" class="logo">
+                <img src="https://panel.mememc.club/storage/VwjoYADexwUXtQiNrwICG7EdK32WKdrAPRkdNuaa.png" alt="MemeMC Logo" class="logo-img">
                 <span class="logo-text">MemeMC</span>
-            </div>
+            </a>
             <div class="nav-links">
-                <a href="#home" class="nav-link active" onclick="showPage('home')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <a href="index.html" class="nav-link active">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     Home
                 </a>
-                <a href="#rules" class="nav-link" onclick="showPage('rules')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                <a href="rules.html" class="nav-link">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
                     Rules
                 </a>
-                <a href="#partners" class="nav-link" onclick="showPage('partners')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <a href="partners.html" class="nav-link">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     Partners
                 </a>
-                <a href="#staff" class="nav-link" onclick="showPage('staff')">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <a href="staff.html" class="nav-link">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     Staff
                 </a>
             </div>
             <button class="mobile-menu-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
             </button>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Home Page -->
-        <div id="home-page" class="page">
-            <div class="space-y-8">
-                <div class="card">
-                    <div class="card-header">
-                        <h1 class="card-title">Welcome to MemeMC!</h1>
-                        <p class="card-description">The most fun Minecraft server network</p>
-                    </div>
-                    <div class="card-content">
-                        <div class="space-y-4">
-                            <p>
-                                MemeMC is a Minecraft server network dedicated to fun, creativity, and community. 
-                                We offer a variety of game modes and experiences for all types of players.
-                            </p>
-                            <p>
-                                Join our community today and experience Minecraft like never before!
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <button class="btn btn-primary">Join Now</button>
-                                <button class="btn btn-outline">Discord</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Survival</h2>
-                        </div>
-                        <div class="card-content">
-                            <p>Classic survival with economy, shops, and community projects.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Creative</h2>
-                        </div>
-                        <div class="card-content">
-                            <p>Unlimited building potential in our creative worlds.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Minigames</h2>
-                        </div>
-                        <div class="card-content">
-                            <p>Bedwars, Skywars, and other fun minigames.</p>
-                        </div>
-                    </div>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to MemeMC</h1>
+                <p>The most fun Minecraft server network</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Join Now</a>
+                    <a href="#" class="btn btn-outline">Discord</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Rules Page -->
-        <div id="rules-page" class="page" style="display: none;">
-            <div class="space-y-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h1 class="card-title">Server Rules</h1>
-                        <p class="card-description">Please follow these rules to ensure everyone has a good time</p>
-                    </div>
+        <section class="features">
+            <h2>Our Server Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Survival</h3>
+                    <p>Classic survival with economy, shops, and community projects.</p>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">No Griefing</h2>
-                        </div>
-                        <div class="card-content">
-                            <p>Do not destroy or modify other players builds without permission.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">No Cheating</h2>
-                        </div>
-                        <div class="card-content">
-                            <p>Use of hacked clients or exploits is strictly prohibited.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Be Respectful</h2>
-                        </div>
-                        <div class="card-content">
-                            <p>Treat all players with respect - no harassment or hate speech.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">No Spamming</h2>
-                        </div>
-                        <div class="card-content">
-                            <p>Avoid excessive messages in chat or flooding with commands.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Follow Staff</h2>
-                        </div>
-                        <div class="card-content">
-                            <p>Always comply with staff instructions and decisions.</p>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏗️</div>
+                    <h3>Creative</h3>
+                    <p>Unlimited building potential in our creative worlds.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Minigames</h3>
+                    <p>Bedwars, Skywars, and other fun minigames.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Partners Page -->
-        <div id="partners-page" class="page" style="display: none;">
-            <div class="space-y-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h1 class="card-title">Our Partners</h1>
-                        <p class="card-description">Check out these awesome servers we're partnered with</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">BlockCraft</h2>
-                        </div>
-                        <div class="card-content">
-                            <div class="flex flex-col items-center space-y-4">
-                                <div class="logo-img"></div>
-                                <p>Our building-focused partner server</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">PixelPvP</h2>
-                        </div>
-                        <div class="card-content">
-                            <div class="flex flex-col items-center space-y-4">
-                                <div class="logo-img"></div>
-                                <p>The best PvP experience in Minecraft</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">RedstoneTech</h2>
-                        </div>
-                        <div class="card-content">
-                            <div class="flex flex-col items-center space-y-4">
-                                <div class="logo-img"></div>
-                                <p>Technical Minecraft at its finest</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Staff Page -->
-        <div id="staff-page" class="page" style="display: none;">
-            <div class="space-y-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h1 class="card-title">Our Team</h1>
-                        <p class="card-description">Meet the people who make MemeMC possible</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Notch</h2>
-                            <p class="card-description">Admin</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="flex flex-col items-center space-y-4">
-                                <div class="logo-img"></div>
-                                <p>Server Owner</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Dinnerbone</h2>
-                            <p class="card-description">Admin</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="flex flex-col items-center space-y-4">
-                                <div class="logo-img"></div>
-                                <p>Lead Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Jeb</h2>
-                            <p class="card-description">Moderator</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="flex flex-col items-center space-y-4">
-                                <div class="logo-img"></div>
-                                <p>Community Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Herobrine</h2>
-                            <p class="card-description">Helper</p>
-                        </div>
-                        <div class="card-content">
-                            <div class="flex flex-col items-center space-y-4">
-                                <div class="logo-img"></div>
-                                <p>Server Support</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2023 MemeMC. All rights reserved.</p>
-        <p class="footer-text">Minecraft is a trademark of Mojang Studios. Not affiliated with Mojang or Microsoft.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://panel.mememc.club/storage/VwjoYADexwUXtQiNrwICG7EdK32WKdrAPRkdNuaa.png" alt="MemeMC Logo">
+                <span>MemeMC</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="rules.html">Rules</a>
+                <a href="partners.html">Partners</a>
+                <a href="staff.html">Staff</a>
+            </div>
+            <div class="footer-legal">
+                <p>© 2023 MemeMC. All rights reserved.</p>
+                <p>Minecraft is a trademark of Mojang Studios. Not affiliated with Mojang or Microsoft.</p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // Simple page navigation
-        function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(page => {
-                page.style.display = 'none';
-            });
-            
-            // Show selected page
-            document.getElementById(`${pageId}-page`).style.display = 'block';
-            
-            // Update active nav link
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-        }
-
-        // Mobile menu toggle (would need more JS to fully implement)
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
