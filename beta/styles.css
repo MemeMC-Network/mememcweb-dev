@@ -930,7 +930,6 @@ body {
     border-radius: 50%;
     object-fit: fill;
     border: 3px solid var(--primary-light);
-    padding: 0.5rem;
     background: white;
     overflow: hidden;
     position: relative;
